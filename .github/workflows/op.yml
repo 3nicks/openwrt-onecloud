@@ -162,8 +162,9 @@ jobs:
         CONFIG_PACKAGE_luci-app-ttyd=y
         CONFIG_PACKAGE_luci-app-samba4=y
         CONFIG_PACKAGE_luci-app-dockerman=y
-        CONFIG_PACKAGE_uci-theme-argon=y
         CONFIG_PACKAGE_luci-app-diskman=y
+        CONFIG_PACKAGE_luci-app-netwizard=y
+        CONFIG_PACKAGE_luci-app-filebrowser-go=y
         EOF
 
         IFS=',' read -r -a plugins <<< "${{ github.event.inputs.CUSTOM_PLUGINS }}"
