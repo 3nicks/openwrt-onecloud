@@ -1,0 +1,33 @@
+
+config samba
+	option workgroup 'WORKGROUP'
+	option description 'Samba on OpenWrt'
+	option charset 'UTF-8'
+	option name 'OneCloud'
+	option homes '1'
+	option macos '1'
+	option allow_legacy_protocols '1'
+	option interface 'lan'
+
+config sambashare
+	option name 'SD'
+	option path '/mnt/sda1'
+	option guest_ok 'yes'
+	option read_only 'no'
+	option create_mask '0777'
+	option dir_mask '0777'
+	option force_root '1'
+	option inherit_owner 'yes'
+
+config sambashare
+	option auto '1'
+	option name 'mmcblk1p1'
+	option path '/mnt/mmcblk1p1'
+	option read_only 'no'
+	option guest_ok 'yes'
+	option create_mask '0777'
+	option dir_mask '0777'
+	option device 'mmcblk1p1'
+	option inherit_owner 'yes'
+	option browseable 'no'
+
