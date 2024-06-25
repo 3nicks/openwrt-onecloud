@@ -15,7 +15,7 @@ on:
       OP_IP:
         description: 'IP选项'     
         required: false
-        default: '192.168.2.2' 
+        default: '192.168.1.2' 
         type: string
 
       OP_rootfs:
@@ -27,7 +27,7 @@ on:
       OP_author:
         description: '定制作者'     
         required: false
-        default: 'shiyu1314' 
+        default: '***' 
         type: string
 
       name:
@@ -42,7 +42,7 @@ on:
       CUSTOM_PLUGINS:
         description: '自定义插件名称，用逗号分隔'
         required: false
-        default: 'luci-app-dockerman,luci-app-mosdns,luci-theme-argon,luci-app-ttyd,luci-app-diskman,luci-app-hd-idle,luci-app-homeproxy,luci-app-samba4,luci-app-adguardhome,luci-app-emby,luci-app-openclash,luci-app-usb-printer'
+        default: 'luci-app-homeproxy,luci-app-adguardhome,luci-app-openclash,luci-app-mosdns,luci-app-aria2,ariang'
         type: string
 
 env:
@@ -159,6 +159,11 @@ jobs:
         CONFIG_PACKAGE_kmod-usb-net=y
         CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
         CONFIG_PACKAGE_zram-swap=y
+        CONFIG_PACKAGE_luci-app-ttyd=y
+        CONFIG_PACKAGE_luci-app-samba4=y
+        CONFIG_PACKAGE_luci-app-dockerman=y
+        CONFIG_PACKAGE_uci-theme-argon=y
+        CONFIG_PACKAGE_luci-app-diskman=y
         EOF
 
         IFS=',' read -r -a plugins <<< "${{ github.event.inputs.CUSTOM_PLUGINS }}"
