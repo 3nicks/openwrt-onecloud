@@ -165,6 +165,8 @@ jobs:
         CONFIG_PACKAGE_luci-app-dockerman=y
         CONFIG_PACKAGE_luci-app-diskman=y
         CONFIG_PACKAGE_luci-app-filebrowser-go=y
+        CONFIG_PACKAGE_luci-theme-argon=y
+        CONFIG_PACKAGE_luci-app-netwizard=y
         EOF
 
         IFS=',' read -r -a plugins <<< "${{ github.event.inputs.CUSTOM_PLUGINS }}"
