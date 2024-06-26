@@ -1,5 +1,4 @@
-
-name: openwrt
+name: lede
 
 on:
   repository_dispatch:
