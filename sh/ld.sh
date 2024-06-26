@@ -1,18 +1,5 @@
 #!/bin/bash
-
-
-echo 'src-git dns https://github.com/sbwml/luci-app-mosdns' >>feeds.conf.default
 echo 'src-git xd https://github.com/2nicks/package' >>feeds.conf.default
-git clone -b master --depth 1 --single-branch https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
-
-
-./scripts/feeds update -a
-rm -rf feeds/packages/net/mosdns
-rm -rf feeds/packages/net/v2ray-geodata
-
-./scripts/feeds update -a
-./scripts/feeds install -a
-
 sed -i "s/192.168.1.1/$OP_IP/" package/base-files/files/bin/config_generate
 sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
 
