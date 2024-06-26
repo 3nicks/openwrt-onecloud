@@ -25,13 +25,12 @@ sed -i "s/%R/by $OP_author/" package/base-files/files/etc/openwrt_release
 
 date=$(date +"%Y-%m-%d")
 echo "                                                    " >> package/base-files/files/etc/banner
-echo ".___                               __         .__" >> package/base-files/files/etc/banner
-echo "|   | _____   _____   ____________/  |______  |  |" >> package/base-files/files/etc/banner
-echo "|   |/     \ /     \ /  _ \_  __ \   __\__  \ |  |" >> package/base-files/files/etc/banner
-echo "|   |  Y Y  \  Y Y  (  <_> )  | \/|  |  / __ \|  |__" >> package/base-files/files/etc/banner
-echo "|___|__|_|  /__|_|  /\____/|__|   |__| (____  /____/" >> package/base-files/files/etc/banner
-echo "          \/      \/                        \/      " >> package/base-files/files/etc/banner
-echo " -----------------------------------------------------" >> package/base-files/files/etc/banner
-echo "         %D ${date} by $OP_author                     " >> package/base-files/files/etc/banner
-echo " -----------------------------------------------------" >> package/base-files/files/etc/banner
-echo "                                                      " >> package/base-files/files/etc/banner
+echo "     _________" >> package/base-files/files/etc/banner
+echo "    /        /\      _    ___ ___  ___" >> package/base-files/files/etc/banner
+echo "   /  LE    /  \    | |  | __|   \| __|" >> package/base-files/files/etc/banner
+echo "  /    DE  /    \   | |__| _|| |) | _|" >> package/base-files/files/etc/banner
+echo " /________/  LE  \  |____|___|___/|___|" >> package/base-files/files/etc/banner
+echo " \        \   DE /" >> package/base-files/files/etc/banner
+echo "  \    LE  \    /  -------------------------------------------" >> package/base-files/files/etc/banner
+echo "   \  DE    \  /    %D %V, %C" >> package/base-files/files/etc/banner
+echo "    \________\/    -------------------------------------------" >> package/base-files/files/etc/banner
