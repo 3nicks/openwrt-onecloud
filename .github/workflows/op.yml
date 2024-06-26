@@ -42,7 +42,7 @@ on:
       CUSTOM_PLUGINS:
         description: '自定义插件名称，用逗号分隔'
         required: false
-        default: 'luci-app-homeproxy,luci-app-adguardhome,luci-app-openclash,luci-app-mosdns,luci-app-aria2,ariang'
+        default: 'luci-app-adguardhome,luci-app-homeproxy,luci-app-openclash,luci-app-mosdns,luci-app-aria2,ariang'
         type: string
 
 env:
@@ -59,7 +59,7 @@ jobs:
     runs-on: ubuntu-22.04
     strategy:
       matrix:
-        kernel_version: ["6.1", "6.6"]
+        kernel_version: ["6.6"]
 
     steps: 
     - name: 释放磁盘空间
