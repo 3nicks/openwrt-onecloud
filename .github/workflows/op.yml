@@ -57,6 +57,8 @@ jobs:
   build_firmware:
     name: 编译固件
     runs-on: ubuntu-22.04
+    strategy:
+      matrix:
         kernel_version: ["6.6"]
 
     steps: 
@@ -110,7 +112,7 @@ jobs:
         
     - name: 添加玩客云
       run: |
-        cp -rf kernel/$kernel/amlogic openwrt/target/linux          
+        cp -rf kernel/6.6/amlogic openwrt/target/linux          
         
     - name: 加载自定义脚本
       run: |
