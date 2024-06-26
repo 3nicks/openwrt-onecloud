@@ -57,8 +57,6 @@ jobs:
   build_firmware:
     name: 编译固件
     runs-on: ubuntu-22.04
-    strategy:
-      matrix:
         kernel_version: ["6.6"]
 
     steps: 
