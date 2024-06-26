@@ -43,7 +43,7 @@ on:
       CUSTOM_PLUGINS:
         description: '自定义插件名称，用逗号分隔'
         required: false
-        default: 'luci-app-adguardhome,luci-app-v2ray-server,luci-app-openclash,luci-app-mosdns,luci-app-aria2,ariang'
+        default: 'uci-app-v2ray-server,luci-app-openclash,luci-app-aria2,ariang'
         type: string
 
 env:
